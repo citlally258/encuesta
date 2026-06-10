@@ -25,9 +25,8 @@ Esta encuesta tiene como objetivo concientizar sobre la importancia de la seguri
 """)
 
 # 🔐 acceso profesor
-modo_admin = st.text_input("🔐 Acceso profesor", type="password")
-
-preguntas = [
+with st.sidebar:
+    modo_admin = st.text_input("🔐 Acceso profesor", type="password")preguntas = [
     "¿Usa contraseñas seguras y diferentes en cada cuenta o correo electrónico?",
     "¿Tiene activada la verificación en dos pasos (2FA)?",
     "¿Revisa los permisos de las aplicaciones antes de instalarlas?",
