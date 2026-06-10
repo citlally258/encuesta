@@ -6,7 +6,7 @@ import os
 st.set_page_config(page_title="Encuesta de Seguridad Informática")
 
 # 🔐 contraseña del profesor
-PASSWORD = "1234"
+PASSWORD = "4321"
 
 st.title("🔒 Encuesta de Seguridad Informática")
 
