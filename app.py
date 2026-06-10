@@ -19,14 +19,18 @@ Responde esta encuesta y descubre qué tan seguras son tus prácticas digitales.
 """)
 
 st.write("""
-Hola, mi nombre es Citlally Monserrat Rodríguez Peña de la carrera de Ciberseguridad.
+Hola, mi nombre es Citlalli Monserrat Rodríguez Peña de la carrera de Ciberseguridad.
 
 Esta encuesta tiene como objetivo concientizar sobre la importancia de la seguridad informática.
 """)
 
-# 🔐 acceso profesor
+# 🔐 acceso profesor (SOLO SIDEBAR)
 with st.sidebar:
-    modo_admin = st.text_input("🔐 Acceso profesor", type="password")preguntas = [
+    modo_admin = st.text_input("🔐 Acceso profesor", type="password")
+
+
+# 📋 PREGUNTAS (FUERA DEL SIDEBAR)
+preguntas = [
     "¿Usa contraseñas seguras y diferentes en cada cuenta o correo electrónico?",
     "¿Tiene activada la verificación en dos pasos (2FA)?",
     "¿Revisa los permisos de las aplicaciones antes de instalarlas?",
@@ -76,7 +80,7 @@ if st.button("Ver resultado"):
 
         elif total >= 7:
             mensaje = "Regular"
-            st.warning("🟡 Regular. Se recomienda reforzar algunas prácticas de seguridad.")
+            st.warning("🟡 Regular. Se recomienda reforzar algunas prácticas.")
 
         else:
             mensaje = "Malo"
@@ -112,9 +116,10 @@ if modo_admin == PASSWORD:
 
         st.subheader("📥 Descargar datos")
 
-        st.download_button(
-            "Descargar CSV",
-            data=open("respuestas.csv", "rb"),
-            file_name="respuestas.csv",
-            mime="text/csv"
-        )
+        with open("respuestas.csv", "rb") as file:
+            st.download_button(
+                "Descargar CSV",
+                data=file,
+                file_name="respuestas.csv",
+                mime="text/csv"
+            )
