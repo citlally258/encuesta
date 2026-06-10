@@ -19,7 +19,7 @@ Responde esta encuesta y descubre qué tan seguras son tus prácticas digitales.
 """)
 
 st.write("""
-Hola, mi nombre es Citlalli Monserrat Rodríguez Peña de la carrera de Ciberseguridad.
+Hola, mi nombre es Citlally Monserrat Rodríguez Peña de la carrera de Ciberseguridad.
 
 Esta encuesta tiene como objetivo concientizar sobre la importancia de la seguridad informática.
 """)
